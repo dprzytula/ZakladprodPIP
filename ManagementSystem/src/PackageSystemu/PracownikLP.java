@@ -24,13 +24,13 @@ public class PracownikLP extends Pracownicy implements forms {
 		{
 		switch(FuncListPracLP())
 		{
-		case 1: FormRep();break;
+		case 1: CreateRaport();break;
 		}
 		}
 	}	
 	
 	
-	public void FormRep() {
+	public void CreateRaport() {
 		System.out.println("Wypelnianie form");
 		String name,nazwa;
 		nazwa = scan.next();
@@ -38,7 +38,7 @@ public class PracownikLP extends Pracownicy implements forms {
 		String raport = "nowy raport o maszynce";
 		name = nazwa+".txt";
 		
-		File file = new File("C:\\Users\\dando\\eclipse-workspace\\ManagementSystem\\reports/"+name);
+		File file = new File("C:\\Users\\dando\\Desktop\\ZakladprodPIP\\ManagementSystem\\reports/"+name);
         if(!file.exists()) {
             try {
 				file.createNewFile();
@@ -48,5 +48,15 @@ public class PracownikLP extends Pracownicy implements forms {
 			}   
         }
         else System.out.println("Taki raport juz istnieje");
+	}
+	@Override
+	public void RaportsList() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void RaportDelete() {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -1,8 +1,17 @@
 package PackageSystemu;
 
+import java.io.File;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class Wlasciciel extends Zaklady implements LoginInterface,loginData {
+public class Wlasciciel extends Zaklady implements loginData,forms {
 	int selcity;
 	int selodd;
 	void FunkWlasc() {
@@ -56,5 +65,28 @@ public class Wlasciciel extends Zaklady implements LoginInterface,loginData {
 				var = 0;
 				}
 			return var;
+		}
+		public void CreateRaport() {
+			
+		}
+		@Override
+		public void RaportsList() {
+			
+	        String[] pathnames;
+
+	        File f = new File("C:\\Users\\dando\\Desktop\\ZakladprodPIP\\ManagementSystem\\reports");
+
+	        
+	        pathnames = f.list();
+
+	        for (String pathname : pathnames) {
+	            System.out.println(pathname);
+	        }
+			
+		}
+		@Override
+		public void RaportDelete() {
+			// TODO Auto-generated method stub
+			
 		}
 }

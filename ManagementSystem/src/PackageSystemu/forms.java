@@ -3,5 +3,7 @@ package PackageSystemu;
 //import java.io.IOException;
 
 public interface forms {
-void FormRep();
+void CreateRaport();
+void RaportsList();
+void RaportDelete();
 }

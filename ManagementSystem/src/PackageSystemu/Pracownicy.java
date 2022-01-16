@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class Pracownicy extends Zaklady implements LoginInterface,loginData {
 	Scanner scan = new Scanner(System.in);
+	String login="",haslo="";
 	public Boolean Login(int city,int odd)
 	{
 		Boolean test = false;
-		String login="",haslo="";
+		
 		System.out.println("Podaj dane logowania:");
 		System.out.println("Podaj login:");
 		login = scan.nextLine();
@@ -16,7 +17,7 @@ public class Pracownicy extends Zaklady implements LoginInterface,loginData {
 		
 		for(int i = 0;i<accounts[city][odd].length;i++)
 		{
-			if(login.compareTo(accounts[city][odd][i][0])==0 && haslo.compareTo(accounts[city][odd][i][1])==0 && "Pracownik".compareTo(accounts[city][odd][i][2])==0) { test = true;
+			if(login.compareTo(accounts[city][odd][i][0])==0 && haslo.compareTo(accounts[city][odd][i][1])==0 && accounts[city][odd][i][2].contains("Pracownik")) { test = true;
 			break;
 			}
 		}
@@ -39,4 +40,25 @@ public class Pracownicy extends Zaklady implements LoginInterface,loginData {
 			return var;
 		}
 	
+		
+		String PracownikLogin() {
+			String role ="";
+			int selcity = SelectZakl();
+			int selodd = ListOdd(selcity);
+			if(LogPracownik(selcity,selodd)==1) 
+			{
+				for(int i = 0;i<accounts[selcity][selodd].length;i++)
+				{
+				if(login.compareTo(accounts[selcity][selodd][i][0])==0 && haslo.compareTo(accounts[selcity][selodd][i][1])==0)
+				{
+				 role = 	accounts[selcity][selodd][i][2];
+				}
+				}
+			}
+			
+			return role;
+		}
+		
+		
+		
 }
