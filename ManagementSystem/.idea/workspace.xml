@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70bb6446-e68c-4890-86ab-884f7fccefc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PackageSystemu/Raport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PackageSystemu/Raports.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PackageSystemu/loginData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackageSystemu/loginData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PackageSystemu/RaportFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PackageSystemu/Raports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackageSystemu/Raports.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +15,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -72,6 +73,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

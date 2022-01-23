@@ -2,22 +2,29 @@ package PackageSystemu;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
-public class Raports
+public class Raports implements RaportFunctions
 {
     Map<Integer, Raport> raportList = new HashMap<>();
-    void createRaport(int raportId, String raportName, String raportData)
+    public void createRaport()
     {
-        Raport rp = new Raport(raportId, raportName, raportData);
-        raportList.put(raportId, rp);
+        Scanner scan = new Scanner(System.in);
+        int raportId = Integer.parseInt (scan.nextLine());
+        String raportName = scan.nextLine();
+        String raportData = scan.nextLine();;
+        Raport r1 = new Raport(raportId, raportName, raportData);
     }
-    void raportList()
+    public void raportList()
     {
         for (Map.Entry<Integer, Raport> entry : raportList.entrySet()) {
             System.out.println("ID =  " + entry.getKey() + " Raport name = " + entry.getValue().getRaportName());
         }
 
     }
-    void raportDelete(){}
+    public void raportDelete(int raportId)
+    {
+
+    }
 
 }
