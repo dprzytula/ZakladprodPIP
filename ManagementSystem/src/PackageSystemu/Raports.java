@@ -24,7 +24,7 @@ public class Raports implements RaportFunctions
     }
     public void raportDelete(int raportId)
     {
-
+        raportList.remove(raportId);
     }
 
 }

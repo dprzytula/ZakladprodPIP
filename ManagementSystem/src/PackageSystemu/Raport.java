@@ -2,9 +2,9 @@ package PackageSystemu;
 
 public class Raport
 {
-    public int RaportId;
-    public String RaportName;
-    public String RaportData;
+    private int RaportId;
+    private String RaportName;
+    private String RaportData;
 
     public Raport(int raportId, String raportName, String raportData) {
         RaportId = raportId;
