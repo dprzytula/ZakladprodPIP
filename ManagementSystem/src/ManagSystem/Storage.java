@@ -10,159 +10,164 @@ public class Storage implements Menus {
 Map <Integer,Part> partsList = new HashMap<Integer,Part>();
 Map <Integer,Material> materialsList = new HashMap<Integer,Material>();
 
-public void addPart() {
+public void addPart(Storage storage) {
 	Part part = new Part();
-	System.out.println("Dodawanie czêœci");
-	System.out.println("Podaj id czêœci");
+	System.out.println("Dodawanie czesci");
+	System.out.println("Podaj id czesci");
 	int partId = scan.nextInt();
-	System.out.println("Podaj nazwe czêœci");
+	System.out.println("Podaj nazwe czesci");
 	part.namePart = scan.next();
-	System.out.println("Podaj iloœæ czêœci");
+	System.out.println("Podaj iloÂœÃ¦ czesci");
 	part.amountPart = scan.nextInt();
-	System.out.println("Czêœæ zosta³a dodana.");
-	partsList.put(partId,part);
+	System.out.println("Czesc zostala dodana.");
+	storage.partsList.put(partId,part);
 }
-public void removePart()
+public void removePart(Storage storage)
 {
 	int key;
-	System.out.println("Czêœæ o jakim ID chcesz usun¹æ?");
+	System.out.println("CzÃªÂœÃ¦ o jakim ID chcesz usunÂ¹Ã¦?");
 	key = scan.nextInt();
-	partsList.remove(key);
+	storage.partsList.remove(key);
 }
-public void updatePartName(int key)
+public void updatePartName(int key,Storage storage)
 {
 	String newName;
-	System.out.println("Podaj now¹ nazwê:");
+	System.out.println("Podaj nowÂ¹ nazwÃª:");
 	newName = scan.next();
 	Part parte = new Part();
-	parte = partsList.get(key);
+	parte = storage.partsList.get(key);
 	parte.namePart = newName; 
+	storage.partsList.replace(key, parte);
 }
-public void updatePartAmount(int key)
+public void updatePartAmount(int key,Storage storage)
 {
 	int newAmount;
-	System.out.println("Podaj now¹ iloœæ");
+	System.out.println("Podaj nowÂ¹ iloÂœÃ¦");
 	newAmount = scan.nextInt();
 	Part parte = new Part();
-	parte = partsList.get(key);
+	parte = storage.partsList.get(key);
 	parte.amountPart = newAmount; 
+	storage.partsList.replace(key, parte);
 }
-public void editPart()
+public void editPart(Storage storage)
 {
 	int key,opt;
-	System.out.println("Podaj ID czêœci, któr¹ chcesz edytowaæ:");
+	System.out.println("Podaj ID czÃªÂœci, ktÃ³rÂ¹ chcesz edytowaÃ¦:");
 	key = scan.nextInt();
-	System.out.println("Który parametr chcesz edytowaæ:");
-	System.out.println("1.Nazwê.");
-	System.out.println("2.Iloœæ.");
+	System.out.println("KtÃ³ry parametr chcesz edytowaÃ¦:");
+	System.out.println("1.NazwÃª.");
+	System.out.println("2.IloÂœÃ¦.");
 	opt = scan.nextInt();
 	switch(opt)
 	{
-	case 1: updatePartName(key);break;
-	case 2: updatePartAmount(key);break;
+	case 1: updatePartName(key,storage);break;
+	case 2: updatePartAmount(key,storage);break;
 	}
 	
 }
-public void partsList()
+public void partsList(Storage storage)
 {
 
-	partsList.forEach((key, part) -> {
+	storage.partsList.forEach((key, part) -> {
 		System.out.println(key + " = " + part.namePart + " " + part.amountPart);
 	});
 }
-public void addMaterial() {
+public void addMaterial(Storage storage) {
 	Material material = new Material();
-	System.out.println("Dodawanie materia³u");
-	System.out.println("Podaj id materia³u");
+	System.out.println("Dodawanie materiaÂ³u");
+	System.out.println("Podaj id materiaÂ³u");
 	int materialId = scan.nextInt();
-	System.out.println("Podaj nazwe materia³u");
+	System.out.println("Podaj nazwe materiaÂ³u");
 	material.nameMaterial = scan.next();
-	System.out.println("Podaj iloœæ materia³u");
+	System.out.println("Podaj iloÂœÃ¦ materiaÂ³u");
 	material.amountMaterial = scan.nextInt();
-	System.out.println("Materia³ zosta³ dodany.");
-	materialsList.put(materialId,material);
+	System.out.println("MateriaÂ³ zostaÂ³ dodany.");
+	storage.materialsList.put(materialId,material);
 }
-public void removeMaterial()
+public void removeMaterial(Storage storage)
 {
 	int key;
-	System.out.println("Materia³ o jakim ID chcesz usun¹æ?");
+	System.out.println("MateriaÂ³ o jakim ID chcesz usunÂ¹Ã¦?");
 	key = scan.nextInt();
-	materialsList.remove(key);
+	storage.materialsList.remove(key);
 }
-public void updateMaterialName(int key)
+public void updateMaterialName(int key,Storage storage)
 {
 	String newName;
-	System.out.println("Podaj now¹ nazwê:");
+	System.out.println("Podaj nowÂ¹ nazwÃª:");
 	newName = scan.next();
 	Material material = new Material();
 	material = materialsList.get(key);
 	material.nameMaterial = newName; 
+	storage.materialsList.replace(key, material);
 }
-public void updateMaterialAmount(int key)
+public void updateMaterialAmount(int key,Storage storage)
 {
 	int newAmount;
-	System.out.println("Podaj now¹ iloœæ");
+	System.out.println("Podaj nowÂ¹ iloÂœÃ¦");
 	newAmount = scan.nextInt();
 	Material material = new Material();
 	material = materialsList.get(key);
 	material.amountMaterial = newAmount; 
+	storage.materialsList.replace(key, material);
 }
-public void editMaterial()
+public void editMaterial(Storage storage)
 {
 	int key,opt;
-	System.out.println("Podaj ID materia³u, któr¹ chcesz edytowaæ:");
+	System.out.println("Podaj ID materiaÂ³u, ktÃ³rÂ¹ chcesz edytowaÃ¦:");
 	key = scan.nextInt();
-	System.out.println("Który parametr chcesz edytowaæ:");
-	System.out.println("1.Nazwê.");
-	System.out.println("2.Iloœæ.");
+	System.out.println("KtÃ³ry parametr chcesz edytowaÃ¦:");
+	System.out.println("1.NazwÃª.");
+	System.out.println("2.IloÂœÃ¦.");
 	opt = scan.nextInt();
 	switch(opt)
 	{
-	case 1: updateMaterialName(key);break;
-	case 2: updateMaterialAmount(key);break;
+	case 1: updateMaterialName(key,storage);break;
+	case 2: updateMaterialAmount(key,storage);break;
 	}
 	
 }
-public void materialsList()
+public void materialsList(Storage storage)
 {
 
-	materialsList.forEach((key, material) -> {
+	storage.materialsList.forEach((key, material) -> {
 		System.out.println(key + " = " + material.nameMaterial + " " + material.amountMaterial);
 	});
 }
 @Override
 public void operationsList() {
-	System.out.println("Co chcesz zrobiæ w magazynie?");
-	System.out.println("1.Dodaæ czêœæ.");
-	System.out.println("2.Edytowaæ czêœæ.");
-	System.out.println("3.Usun¹æ czêœæ.");
-	System.out.println("4.Dodaæ materia³.");
-	System.out.println("5.Edytowaæ materia³.");
-	System.out.println("6.Usun¹æ materia³.");
-	System.out.println("7.Wyœwietl listê czêœci w magazynie.");
-	System.out.println("8.Wyœwietl listê materia³ów w magazynie.");
-	System.out.println("9.Wyjœcie.");
+	System.out.println("Co chcesz zrobiÃ¦ w magazynie?");
+	System.out.println("1.DodaÄ‡ czÄ™Å›Ä‡.");
+	System.out.println("2.EdytowaÃ¦ czÄ™Å›Ä‡.");
+	System.out.println("3.UsunÂ¹Ã¦ czÄ™Å›Ä‡.");
+	System.out.println("4.DodaÃ¦ materiaÂ³.");
+	System.out.println("5.EdytowaÃ¦ materiaÂ³.");
+	System.out.println("6.UsunÂ¹Ã¦ materiaÂ³.");
+	System.out.println("7.WyÂœwietl listÃª czÃªÂœci w magazynie.");
+	System.out.println("8.WyÂœwietl listÃª materiaÂ³Ã³w w magazynie.");
+	System.out.println("9.WyjÂœcie.");
 }
-public void selectOperation(){
+public void selectOperation(Storage storage){
 	int opt;
 	Boolean stat = true;
 	while(stat == true) {
 	operationsList();
-	System.out.println("Wybierz operacjê:");
+	System.out.println("Wybierz operacjÃª:");
 	opt = scan.nextInt();
 	switch(opt)
 	{
-	case 1: addPart();break;
-	case 2: editPart();break;
-	case 3: removePart();break;
-	case 4: addMaterial();break;
-	case 5: editMaterial();break;
-	case 6: removeMaterial();break;
-	case 7: partsList();break;
-	case 8: materialsList();break;
+	case 1: addPart(storage);break;
+	case 2: editPart(storage);break;
+	case 3: removePart(storage);break;
+	case 4: addMaterial(storage);break;
+	case 5: editMaterial(storage);break;
+	case 6: removeMaterial(storage);break;
+	case 7: partsList(storage);break;
+	case 8: materialsList(storage);break;
 	case 9: stat = false;break;
-	default: System.out.println("Wybrano niepoprawn¹ operacjê.");break;
+	default: System.out.println("Wybrano niepoprawnÂ¹ operacjÃª.");break;
 	}
 }
 }
 }
+

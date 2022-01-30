@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70bb6446-e68c-4890-86ab-884f7fccefc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PackageSystemu/Part.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PackageSystemu/PartsFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PackageSystemu/Raport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackageSystemu/Raport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PackageSystemu/Raports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackageSystemu/Raports.java" afterDir="false" />
-    </list>
+    <list default="true" id="e88abc9d-0365-4e66-ac01-12f0cab7f79f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,31 +10,41 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="23ncFxcjv7gFLSApQ1QK6HZgmJJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="24R8ENmgO7l8y0HSsGEyKfJkJVd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
-    <configuration name="managementsystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PackageSystemu.managementsystem" />
-      <module name="ManagementSystem" />
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dando\IdeaProjects\ManagmentSystem\src\ManagSystem" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.tests.badLoginTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ManagSystem.Main" />
+      <module name="ManagmentSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="PackageSystemu.*" />
+          <option name="PATTERN" value="ManagSystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -48,44 +52,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="tests.badLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ManagmentSystem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="tests" />
+      <option name="METHOD_NAME" value="badLoginTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tests.loginWorkerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ManagmentSystem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="tests" />
+      <option name="METHOD_NAME" value="loginWorkerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tests.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ManagmentSystem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="tests" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.managementsystem" />
+        <item itemvalue="JUnit.tests.badLoginTest" />
+        <item itemvalue="JUnit.tests.loginWorkerTest" />
+        <item itemvalue="JUnit.tests.test1" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="70bb6446-e68c-4890-86ab-884f7fccefc5" name="Default Changelist" comment="" />
-      <created>1642373219950</created>
+      <changelist id="e88abc9d-0365-4e66-ac01-12f0cab7f79f" name="Changes" comment="" />
+      <created>1643581929275</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1642373219950</updated>
+      <updated>1643581929275</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/PackageSystemu/managementsystem.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

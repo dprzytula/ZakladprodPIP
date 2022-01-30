@@ -12,17 +12,15 @@ public void addBranch()
 {
 	Boolean stat = true;
 	Branch branch = new Branch();
-	System.out.println("Podaj ID oddzia³u:");
-	int branchId = scan.nextInt();
-	while(stat==true) {
-	if(branchsList.containsKey(branchId)) {
-		System.out.println("Oddzia³ o takim ID istnieje ju¿ w tym mieœcie, poddaj inne ID");
-		branchId = scan.nextInt();
-	}
+	int branchId=1;
+	while(stat == true) {
+		 if(branchsList.containsKey(branchId)) {
+				branchId = branchId+1;
+		 }	
 	else {
-		System.out.println("Podaj ulicê, na której le¿y oddzia³:");
+		System.out.println("Podaj ulice, na ktorej lezy oddzial:");
 		branch.branchStreet = scan.next();
-		System.out.println("Podaj numer lokalu (dla bloków np. 10/31):");
+		System.out.println("Podaj numer lokalu (dla blokow np. 10/31):");
 		branch.branchAdressNumber = scan.next();
 		branchsList.put(branchId,branch);
 		stat = false;
@@ -32,9 +30,18 @@ public void addBranch()
 
 public void branchsList()
 {
-
+	System.out.println("Lista oddzialow:");
 	branchsList.forEach((key, branch) -> {
-		System.out.println(key + " = " + branch.branchStreet +" "+branch.branchAdressNumber);
+		System.out.println("Id oddzialu: "+key+" Adres: " + branch.branchStreet +" "+branch.branchAdressNumber);
 	});
 }
+public void branchDelete()
+{
+	int branchRemId;
+	System.out.println("Podaj oddzial, ktory chcesz usunac:");
+	branchRemId = scan.nextInt();
+	branchsList.remove(branchRemId);
+	System.out.println("Oddzial zostal usuniety.");
+}
+
 }
